@@ -1,0 +1,43 @@
+body{
+  background:#0b1628;
+}
+
+.card{
+  border-radius:20px;
+}
+
+.container{
+  border-radius:25px;
+}
+/* hide the real input */
+.upload-btn input[type="file"] {
+    display: none;
+}
+
+/* style the label like a button */
+.upload-btn {
+    background:#198754;
+    color:white;
+    padding:10px 16px;
+    border-radius:10px;
+    cursor:pointer;
+    display:inline-block;
+    font-weight:600;
+}
+
+/* hover effect */
+.upload-btn:hover {
+    background:#157347;
+}
+.upload-box {
+    border:2px dashed #aaa;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    position:relative;
+    color:#ccc;
+    cursor:pointer;
+}
+
+
+
