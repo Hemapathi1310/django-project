@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,9 +25,10 @@ SECRET_KEY = 'django-insecure-n!gdel9*6ogtzbid4#)gl0kv00ijoa5e#&l+iju+v!rx@nw35o
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+SECRET_KEY = os.getenv('SECRET_KEY')
 
+ALLOWED_HOSTS = ["*"]
 
-ALLOWED_HOSTS = ['your-domain.com', 'yourapp.onrender.com', 'localhost']
 
 
 
@@ -51,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'shoppingcart.urls'
